@@ -64,6 +64,22 @@ public class Week04CodingProject {
 		 System.out.println(answer4);
 		 System.out.println("ages[0]");
 		 
+		 //Question 5: number of letters in each name
+		 System.out.println("Name Lengths Array:");
+		 int[] nameLengths = new int[names.length];
+		 for (int i = 0; i < names.length; i++) {
+			 nameLengths[i] = names[i].length();
+			 System.out.print(nameLengths[i] + " ");
+		 }
+		 System.out.println(" ");
+		 
+		 //Question 6: sum of all letters
+		 System.out.println("The Sum of all the Name Lengths:");
+		 int nameSum = 0;
+		 for (int name : nameLengths) {
+			 nameSum += name;
+		 }
+		 System.out.println(nameSum);
 		 
 	}
 
