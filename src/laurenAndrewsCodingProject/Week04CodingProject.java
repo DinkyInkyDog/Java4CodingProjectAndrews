@@ -24,8 +24,31 @@ public class Week04CodingProject {
 			sum += age;
 		}
 		 int averageAges = sum / ages.length;
-		 System.out.println(averageAges);
+		 System.out.println("Average Age = " + averageAges);
 		 // the output was 28 which is the correct math.
+		 
+		 
+		 
+		 
+		 
+		 
+		 //Now for strings
+		 String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
+		 
+		 //Find the average letters per name
+		 int sumLetters = 0;
+		 for (String name : names) {
+			 sumLetters += name.length();
+		 }
+		 int averageLetters = sumLetters / names.length;
+		 System.out.println("Average Letters = " + averageLetters);
+		 
+		 //List the names
+		 String allNames = "";
+		 for (String name : names) {
+			 allNames += name + ", ";
+		 }
+		 System.out.println(allNames);
 		
 	}
 
