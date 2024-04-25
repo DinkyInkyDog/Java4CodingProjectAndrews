@@ -121,6 +121,28 @@ public class Week04CodingProject {
 		 System.out.println("  ");
 		 System.out.println("The first array has a higher average than the second. " + firstHasGreaterAverage(prices, prices2));
 		 System.out.println("  ");
+		 
+		 System.out.println("Do I want to buy a drink?");
+		 boolean hotOutside = false;
+		 System.out.println("Is it hot outside?");
+		 System.out.println(hotOutside);
+		 double moneyInPocket = 15.42;
+		 System.out.println("How much money do I have in my pocket?");
+		 System.out.println(moneyInPocket);
+		 if (willBuyDrink(hotOutside, moneyInPocket) == true) {
+			 System.out.println("I think I will get something to drink.");
+		 } else {
+			 System.out.println("I don't think I want something to drink.");
+		 }
+		 System.out.println("  ");
+		 
+		 //Prompt 13 is just a free for all!!
+		 //The madness
+		 
+		 //My problem will be that I have multiple duplicate code
+		 //to print out the contents of an array.
+		 printArray(ages);
+		 //So I turned that bit of code into a method. 
 	} 
 
 	public static String concatenateWord(String word, int n) {
@@ -194,6 +216,13 @@ public class Week04CodingProject {
 		}
 	}
 	
+	public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
+		if (isHotOutside == true && moneyInPocket > 10.50) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	}
 
 
