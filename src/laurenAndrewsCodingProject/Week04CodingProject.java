@@ -81,6 +81,20 @@ public class Week04CodingProject {
 		 }
 		 System.out.println(nameSum);
 		 
-	}
+		 //Prompt 7
+		 System.out.println("Concatenate method");
+		 System.out.println(concatenateWord("Hello", 5));
+		 
+	} 
 
+	public static String concatenateWord(String word, int n) {
+		String finalWord = "";
+		for (int i = 0; i < n; i++) {
+			finalWord += word;
+		}
+		return finalWord;
+	}
+	
+	
+	
 }
