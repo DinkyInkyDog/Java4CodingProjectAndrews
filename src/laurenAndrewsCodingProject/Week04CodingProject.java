@@ -49,7 +49,22 @@ public class Week04CodingProject {
 			 allNames += name + ", ";
 		 }
 		 System.out.println(allNames);
-		
+		 
+		 
+		 String question3 = "How do you access the last element of any array?";
+		 String answer3 = "By subtracting 1 from the length of the array to find the index";
+		 System.out.println(question3 + ":");
+		 System.out.println(answer3);
+		 System.out.println("ages[ages.length -1]");
+		 
+		 
+		 String question4 = "How do you access the first element of any array?";
+		 String answer4 = "Simple. The index is 0";
+		 System.out.println(question4 + ":"); 
+		 System.out.println(answer4);
+		 System.out.println("ages[0]");
+		 
+		 
 	}
 
 }
