@@ -94,11 +94,33 @@ public class Week04CodingProject {
 		 System.out.print("Print a full name: ");
 		 System.out.println(fullName("Lauren", "Andrews"));
 		 System.out.println("  ");
+		 
+		 
 		 //Prompt 9
 		 System.out.println("For this one, lets reuse the array of ages from earlier.");
 		 printArray(ages);
 		 System.out.println("The sum of all the ages is greater than 100.");
 		 System.out.println(sumIsGreater100(ages));
+		 System.out.println("  ");
+		 
+		 //Prompt 10
+		 System.out.println("An average of a double array");
+		 double[] prices = {2.50, 10.99, 4.20};
+		 printDoubleArray(prices);
+		 System.out.println("  ");
+		 System.out.println(averageOfArray(prices));
+		 System.out.println("  ");
+		 
+		 //Prompt 11
+		 System.out.println("Two double arrays, Averaged");
+		 double[] prices2 = {14.92, 3.99, 9.59};
+		 System.out.println("Using the same array as before plus a new one");
+		 printDoubleArray(prices);
+		 System.out.println("  ");
+		 printDoubleArray(prices2);
+		 System.out.println("  ");
+		 System.out.println("The first array has a higher average than the second. " + firstHasGreaterAverage(prices, prices2));
+		 System.out.println("  ");
 	} 
 
 	public static String concatenateWord(String word, int n) {
@@ -132,4 +154,46 @@ public class Week04CodingProject {
 			System.out.print(n + " ");
 		}
 	}
-}
+	public static void printDoubleArray(double[] someArrays) {
+		for (double n : someArrays) {
+			System.out.print(n + " ");
+		}
+	}
+	
+	public static double averageOfArray(double[] decimalArray) {
+		double average = 0;
+		double sum = 0;
+		int count = 0;
+		for (double num : decimalArray) {
+			sum += num;
+			count ++;
+		}
+		average = sum / count;
+		return average;
+	}
+	
+	public static boolean firstHasGreaterAverage(double[] firstArray, double[] secondArray) {
+		double firstSum = 0;
+		int firstLength = firstArray.length;
+		for (double n : firstArray) {
+			firstSum += n;
+		}
+		double firstAverage = firstSum / firstLength;
+		
+		double secondSum = 0;
+		int secondLength = secondArray.length;
+		for (double nn : secondArray) {
+			secondSum += nn;
+		}
+		double secondAverage = secondSum / secondLength;
+		
+		if (firstAverage > secondAverage) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	}
+
+
