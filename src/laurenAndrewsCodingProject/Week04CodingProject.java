@@ -15,7 +15,7 @@ public class Week04CodingProject {
 			System.out.print("Enter number: ");
 			 String clArgs = sc.nextLine();
 			 if (!isCommandValid(clArgs)) {
-					break;
+				
 				} else {
 			 switch(clArgs) {
 			 case "1" :
@@ -101,12 +101,12 @@ public class Week04CodingProject {
 				int firstSum = ages[0] - ages[ages.length -1];
 				//to get the last value you'll need its index. 
 				//The index is the length of the overall array -1 because the index starts at 0
-				System.out.println(firstSum);
+				System.out.println("first sum: " + firstSum);
 				//as expected i got -90. 
 				
 				int[] ages2 = {14, 3, 23, 9, 64, 8, 28, 93, 60};
 				int secondSum = ages2[0] - ages2[ages2.length -1];
-				System.out.println(secondSum);
+				System.out.println("second sum: " + secondSum);
 				//-46 is what it came up with. 
 				//now to find the average age from the first array, ages.
 				int sum = 0;
@@ -118,9 +118,9 @@ public class Week04CodingProject {
 				 // the output was 28 which is the correct math.
 				 
 				 
+				 System.out.println("  ");
 				 
-				 
-				 
+				 System.out.println("  ");
 				 
 				 //Now for strings
 				 String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
