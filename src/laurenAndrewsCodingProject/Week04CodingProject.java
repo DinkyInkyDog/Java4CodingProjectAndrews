@@ -136,13 +136,10 @@ public class Week04CodingProject {
 		 }
 		 System.out.println("  ");
 		 
-		 //Prompt 13 is just a free for all!!
-		 //The madness
+		 //Prompt 13 , a method to solve a problem
 		 
-		 //My problem will be that I have multiple duplicate code
-		 //to print out the contents of an array.
-		 printArray(ages);
-		 //So I turned that bit of code into a method. 
+		 
+		  
 	} 
 
 	public static String concatenateWord(String word, int n) {
@@ -223,6 +220,20 @@ public class Week04CodingProject {
 			return false;
 		}
 	}
+	
+	static boolean isCommandValid(String[] clArgs) {
+		boolean isValid = true;
+		if (clArgs.length != 0) {
+			isValid = true;
+		} else {
+			System.out.println("Please enter an Argument.");
+			isValid = false;
+		}
+		return isValid;
+	}
+	
+	
+	
 	}
 
 
