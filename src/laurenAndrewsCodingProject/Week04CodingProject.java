@@ -1,82 +1,95 @@
 package laurenAndrewsCodingProject;
 
+import java.util.Scanner;
+
 public class Week04CodingProject {
 
 	public static void main(String[] args) {
-		if (!isCommandValid(args)) {
-			return;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		boolean runProgram = true;
+		while (runProgram) {
+			int[] ages = {3, 9, 23, 64, 2, 8, 28, 93};
+			System.out.print("Enter number: ");
+			 String clArgs = sc.nextLine();
+			 if (!isCommandValid(clArgs)) {
+					break;
+				} else {
+			 switch(clArgs) {
+			 case "1" :
+				 examples1Through6();
+				 break;
+			 case "2" :
+				 //Now for Methods
+				 //Prompt 7
+				 System.out.println("Concatenate method");
+				 System.out.println(concatenateWord("Hello", 5));
+				 System.out.println("  ");
+				 break;
+			 case "3" :
+				 //Prompt 8
+				 System.out.print("Print a full name: ");
+				 System.out.println(fullName("Lauren", "Andrews"));
+				 System.out.println("  ");
+				 break;
+			 case "4" :
+				 //Prompt 9
+				 System.out.println("For this one, lets reuse the array of ages from earlier.");
+				 printArray(ages);
+				 System.out.println("The sum of all the ages is greater than 100.");
+				 System.out.println(sumIsGreater100(ages));
+				 System.out.println("  ");
+				 break;
+			 case "5" :
+				 //Prompt 10
+				 System.out.println("An average of a double array");
+				 double[] prices = {2.50, 10.99, 4.20};
+				 printDoubleArray(prices);
+				 System.out.println("  ");
+				 System.out.println(averageOfArray(prices));
+				 System.out.println("  ");
+				 break;
+			 case "6" :
+				 //Prompt 11
+				 System.out.println("Two double arrays, Averaged");
+				 double[] prices3 = {2.50, 10.99, 4.20};
+				 double[] prices2 = {14.92, 3.99, 9.59};
+				 System.out.println("Using the same array as before plus a new one");
+				 printDoubleArray(prices3);
+				 System.out.println("  ");
+				 printDoubleArray(prices2);
+				 System.out.println("  ");
+				 System.out.println("The first array has a higher average than the second. " + firstHasGreaterAverage(prices3, prices2));
+				 System.out.println("  ");
+				 break;
+			 case "7" :
+				 
+				 System.out.println("Do I want to buy a drink?");
+				 boolean hotOutside = false;
+				 System.out.println("Is it hot outside?");
+				 System.out.println(hotOutside);
+				 double moneyInPocket = 15.42;
+				 System.out.println("How much money do I have in my pocket?");
+				 System.out.println(moneyInPocket);
+				 if (willBuyDrink(hotOutside, moneyInPocket) == true) {
+					 System.out.println("I think I will get something to drink.");
+				 } else {
+					 System.out.println("I don't think I want something to drink.");
+				 }
+				 System.out.println("  ");
+				 break;
+			 case "8" :
+				 //Prompt 13 , a method to solve a problem
+				 System.out.println("I created a method for the main examples and to turn this into a menu for my method.");
+				 break;
+			 case "-1" :
+				 runProgram = false;
+				 break;
+			}
+		} 
 		}
-		int[] ages = {3, 9, 23, 64, 2, 8, 28, 93};
-		 final String clArgs = args[0];
-		 switch(clArgs) {
-		 case "1" :
-			 examples1Through6();
-			 break;
-		 case "7" :
-			 //Now for Methods
-			 //Prompt 7
-			 System.out.println("Concatenate method");
-			 System.out.println(concatenateWord("Hello", 5));
-			 System.out.println("  ");
-			 break;
-		 case "8" :
-			 //Prompt 8
-			 System.out.print("Print a full name: ");
-			 System.out.println(fullName("Lauren", "Andrews"));
-			 System.out.println("  ");
-			 break;
-		 case "9" :
-			 //Prompt 9
-			 System.out.println("For this one, lets reuse the array of ages from earlier.");
-			 printArray(ages);
-			 System.out.println("The sum of all the ages is greater than 100.");
-			 System.out.println(sumIsGreater100(ages));
-			 System.out.println("  ");
-			 break;
-		 case "10" :
-			 //Prompt 10
-			 System.out.println("An average of a double array");
-			 double[] prices = {2.50, 10.99, 4.20};
-			 printDoubleArray(prices);
-			 System.out.println("  ");
-			 System.out.println(averageOfArray(prices));
-			 System.out.println("  ");
-			 break;
-		 case "11" :
-			 //Prompt 11
-			 System.out.println("Two double arrays, Averaged");
-			 double[] prices3 = {2.50, 10.99, 4.20};
-			 double[] prices2 = {14.92, 3.99, 9.59};
-			 System.out.println("Using the same array as before plus a new one");
-			 printDoubleArray(prices3);
-			 System.out.println("  ");
-			 printDoubleArray(prices2);
-			 System.out.println("  ");
-			 System.out.println("The first array has a higher average than the second. " + firstHasGreaterAverage(prices3, prices2));
-			 System.out.println("  ");
-			 break;
-		 case "12" :
-			 
-			 System.out.println("Do I want to buy a drink?");
-			 boolean hotOutside = false;
-			 System.out.println("Is it hot outside?");
-			 System.out.println(hotOutside);
-			 double moneyInPocket = 15.42;
-			 System.out.println("How much money do I have in my pocket?");
-			 System.out.println(moneyInPocket);
-			 if (willBuyDrink(hotOutside, moneyInPocket) == true) {
-				 System.out.println("I think I will get something to drink.");
-			 } else {
-				 System.out.println("I don't think I want something to drink.");
-			 }
-			 System.out.println("  ");
-			 break;
-		 case "13" :
-			 //Prompt 13 , a method to solve a problem
-			 System.out.println("I created a method for the main examples and to turn this into a menu for my method.");
-			 break;
-		}
-		  
 	} 
 
 	public static void examples1Through6() {
@@ -242,12 +255,13 @@ public class Week04CodingProject {
 		}
 	}
 	
-	static boolean isCommandValid(String[] clArgs) {
+	static boolean isCommandValid(String clArgs) {
 		boolean isValid = true;
-		if (clArgs.length != 0) {
+		int number = Integer.valueOf(clArgs);
+		if ((number < 9 && number > 0) || number == -1) {
 			isValid = true;
 		} else {
-			System.out.println("Please enter an Argument.");
+			System.out.println("Please enter a valid argument.");
 			isValid = false;
 		}
 		return isValid;
