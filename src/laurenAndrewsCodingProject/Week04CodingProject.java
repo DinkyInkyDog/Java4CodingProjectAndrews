@@ -176,7 +176,7 @@ public class Week04CodingProject {
 	}
 	
 	
-	public static String concatenateWord(String word, int n) {
+ 	public static String concatenateWord(String word, int n) {
 		String finalWord = "";
 		for (int i = 0; i < n; i++) {
 			finalWord += word;
